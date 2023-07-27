@@ -62,7 +62,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/signUp", method = RequestMethod.POST)
-	String processSignUpForm(@RequestParam("name") String name, @RequestParam("email") String email, @RequestParam("password") String password, 
+	String processSignUpForm(@RequestParam("name") String name, @RequestParam("emale") String email, @RequestParam("password") String password, 
 					Model model, HttpSession session) {
 		LOGGER.info("Processing sign up form!");
 		User user = this.userRepository.find(email);
